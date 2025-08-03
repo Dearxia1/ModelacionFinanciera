@@ -1,0 +1,74 @@
+/* Estilo general del cuerpo */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 2rem 1rem;
+  background: #f4f7fa;
+  color: #333;
+}
+
+/* Contenedor centrado horizontalmente */
+.container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+/* Títulos */
+h1, h2 {
+  color: #2a6fb4;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Etiquetas */
+label {
+  display: block;
+  margin-top: 0.8rem;
+  font-weight: 600;
+}
+
+/* Inputs y selects uniformes */
+input, select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.2rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 0.95rem;
+}
+
+/* Botón uniforme y estilizado */
+button {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.7rem;
+  font-size: 1rem;
+  background-color: #2a6fb4;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1e5a96;
+}
+
+/* Resultados */
+p.resultado {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a3f73;
+  background: #e6f0ff;
+  padding: 0.5rem;
+  border-radius: 6px;
+  margin-top: 0.4rem;
+}

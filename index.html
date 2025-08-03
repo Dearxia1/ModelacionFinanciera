@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Conversor de Tasas de Interés</title>
+  <link rel="stylesheet" href="./css/styles.css">
+
+</head>
+<body>
+ <div class="container">
+  <h1>Conversor de Tasas</h1>
+  <label for="tasa">Tasa nominal (%):</label>
+  <input type="number" id="tasa" step="0.01"><br><br>
+
+    <label for="periodos">Número de periodos al año:</label>
+    <select id="periodos">
+    <option value="1">1 (Anual)</option>
+    <option value="2">2 (Semestral)</option>
+    <option value="4">4 (Trimestral)</option>
+    <option value="6">6 (Bimestral)</option>
+    <option value="12">12 (Mensual)</option>
+    <option value="24">24 (Quincenal)</option>
+    <option value="52">52 (Semanal)</option>
+    <option value="365">365 (Diario)</option>
+    <option value="8640">8640 (Hora)</option>
+    </select>
+
+
+  <button id="convertirBtn1">Convertir</button>
+
+  <h2>Resultado:</h2>
+  <p id="resultado">______________</p>
+  <h2>Tasa periodica</h2>
+  <p id="resultadoTasaPeriodica">______________</p>
+
+
+  <label for="tasa">E.A (%):</label>
+  <input type="number" id="tasaEfectiva" step="0.01"><br><br>  
+    <label for="periodos2">Número de periodos al año:</label>
+    <select id="periodos2">
+    <option value="1">1 (Anual)</option>
+    <option value="2">2 (Semestral)</option>
+    <option value="4">4 (Trimestral)</option>
+    <option value="6">6 (Bimestral)</option>
+    <option value="12">12 (Mensual)</option>
+    <option value="24">24 (Quincenal)</option>
+    <option value="52">52 (Semanal)</option>
+    <option value="365">365 (Diario)</option>
+    <option value="8640">8640 (Hora)</option>
+    </select>
+
+    <button id="convertirBtn2">Convertir</button>
+
+
+  <h2>Resultado tasa periodica aplicada al negocio:</h2>
+  <p id="resultadoTasaPeriodicaAplicadaAlNegocio">______________</p>
+
+  <h2>Resultado tasa periodica nominal</h2>
+  <p id="resultadoTasaPeriodicaNominal">______________</p>
+
+
+<script type="module" src="./js/controller.js"></script>
+</div>
+</body>
+</html>
