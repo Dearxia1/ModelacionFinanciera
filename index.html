@@ -4,62 +4,62 @@
   <meta charset="UTF-8">
   <title>Conversor de Tasas de Interés</title>
   <link rel="stylesheet" href="./css/styles.css">
-
 </head>
 <body>
- <div class="container">
-  <h1>Conversor de Tasas</h1>
-  <label for="tasa">Tasa nominal (%):</label>
-  <input type="number" id="tasa" step="0.01"><br><br>
+  <div class="container">
+    <h1>Conversor de Tasas</h1>
 
-    <label for="periodos">Número de periodos al año:</label>
-    <select id="periodos">
-    <option value="1">1 (Anual)</option>
-    <option value="2">2 (Semestral)</option>
-    <option value="4">4 (Trimestral)</option>
-    <option value="6">6 (Bimestral)</option>
-    <option value="12">12 (Mensual)</option>
-    <option value="24">24 (Quincenal)</option>
-    <option value="52">52 (Semanal)</option>
-    <option value="365">365 (Diario)</option>
-    <option value="8640">8640 (Hora)</option>
+    <!-- Conversión desde TN -->
+    <label for="inpTN">Tasa nominal (%):</label>
+    <input type="number" id="inpTN" step="0.01"><br><br>
+
+    <label for="selN1">Número de periodos al año:</label>
+    <select id="selN1">
+      <option value="1">1 (Anual)</option>
+      <option value="2">2 (Semestral)</option>
+      <option value="4">4 (Trimestral)</option>
+      <option value="6">6 (Bimestral)</option>
+      <option value="12">12 (Mensual)</option>
+      <option value="24">24 (Quincenal)</option>
+      <option value="52">52 (Semanal)</option>
+      <option value="365">365 (Diario)</option>
+      <option value="8640">8640 (Hora)</option>
     </select>
 
+    <button id="btnConvertirTN">Convertir desde TN</button>
 
-  <button id="convertirBtn1">Convertir</button>
+    <h2>Resultado:</h2>
+    <p id="resTE">Tasa efectiva: </p>
+    <p id="resTP">Tasa periódica: </p>
 
-  <h2>Resultado:</h2>
-  <p id="resultado">______________</p>
-  <h2>Tasa periodica</h2>
-  <p id="resultadoTasaPeriodica">______________</p>
+    <hr>
 
+    <!-- Conversión desde TE -->
+    <label for="inpTE">Tasa efectiva anual (%):</label>
+    <input type="number" id="inpTE" step="0.01"><br><br>
 
-  <label for="tasa">E.A (%):</label>
-  <input type="number" id="tasaEfectiva" step="0.01"><br><br>  
-    <label for="periodos2">Número de periodos al año:</label>
-    <select id="periodos2">
-    <option value="1">1 (Anual)</option>
-    <option value="2">2 (Semestral)</option>
-    <option value="4">4 (Trimestral)</option>
-    <option value="6">6 (Bimestral)</option>
-    <option value="12">12 (Mensual)</option>
-    <option value="24">24 (Quincenal)</option>
-    <option value="52">52 (Semanal)</option>
-    <option value="365">365 (Diario)</option>
-    <option value="8640">8640 (Hora)</option>
+    <label for="selN2">Número de periodos al año:</label>
+    <select id="selN2">
+      <option value="1">1 (Anual)</option>W
+      <option value="2">2 (Semestral)</option>
+      <option value="4">4 (Trimestral)</option>
+      <option value="6">6 (Bimestral)</option>
+      <option value="12">12 (Mensual)</option>
+      <option value="24">24 (Quincenal)</option>
+      <option value="52">52 (Semanal)</option>
+      <option value="365">365 (Diario)</option>
+      <option value="8640">8640 (Hora)</option>
     </select>
 
-    <button id="convertirBtn2">Convertir</button>
+    <button id="btnConvertirTE">Convertir desde TE</button>
 
+    <h2>Resultado:</h2>
+    <p id="resTPA">TP aplicada vencida: </p>
+    <p id="resTPNV">TP nominal vencida: </p>
+    <p id="resTPAA">TP aplicada anticipada: </p>
+    <p id="resTPNA">TP nominal anticipada: </p>
 
-  <h2>Resultado tasa periodica aplicada al negocio:</h2>
-  <p id="resultadoTasaPeriodicaAplicadaAlNegocio">______________</p>
-
-  <h2>Resultado tasa periodica nominal</h2>
-  <p id="resultadoTasaPeriodicaNominal">______________</p>
-
-
-<script type="module" src="./js/controller.js"></script>
-</div>
+    <script type="module" src="./js/controller.js"></script>
+  </div>
 </body>
 </html>
