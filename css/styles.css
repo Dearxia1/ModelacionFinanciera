@@ -72,3 +72,28 @@ p.resultado {
   border-radius: 6px;
   margin-top: 0.4rem;
 }
+
+@media (max-width: 480px) {
+  body {
+    padding: 1rem 0.5rem;
+  }
+
+  .container {
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  }
+
+  h1, h2 {
+    font-size: 1rem;
+  }
+
+  input, select, button {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  p.resultado {
+    font-size: 0.95rem;
+  }
+}
