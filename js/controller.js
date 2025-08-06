@@ -1,23 +1,53 @@
 // controller.js
-import { calcTE, calcTP, calcTPA, calcTPN, calcTPAA, calcTPNA } from './model.js';
+import { calcTE, calcTP, calcTPA, calcTPN, calcTPAA, calcTPNA, calcTPAEAAtoV } from './model.js';
 
 function convertirTN() {
   const tn = parseFloat(document.getElementById('inpTN').value);
   const n = parseInt(document.getElementById('selN1').value);
+  const t = parseInt(document.getElementById('type').value);
 
-  const resTE = document.getElementById('resTE');
-  const resTP = document.getElementById('resTP');
 
-  if (isNaN(tn) || isNaN(n) || n <= 0) {
-    resTE.textContent = 'Ingrese valores válidos.';
-    return;
+  switch (t) {
+    case 0:
+
+    console.log(t)
+
+     let resTE = document.getElementById('resTE');
+     let resTP = document.getElementById('resTP');
+
+    if (isNaN(tn) || isNaN(n) || n <= 0) {
+      resTE.textContent = 'Ingrese valores válidos.';
+      return;
+    }
+
+     let te = calcTPAEAAtoV(tn, n);
+
+    resTE.textContent = `Tasa efectiva: ${te.toFixed(2)}%`;
+    resTP.textContent = `Tasa periódica: ${tp.toFixed(2)}%`;
+
+      break;
+
+    case 1:
+
+     let resTE1 = document.getElementById('resTE');
+     let resTP1 = document.getElementById('resTP');
+
+    if (isNaN(tn) || isNaN(n) || n <= 0) {
+      resTE1.textContent = 'Ingrese valores válidos.';
+      return;
+    }
+
+     let tp1 = calcTP(tn, n);
+     let te1 = calcTE(tn, n);
+
+    resTE1.textContent = `Tasa efectiva: ${te1.toFixed(2)}%`;
+    resTP1.textContent = `Tasa periódica: ${tp1.toFixed(2)}%`;
+
+        
+    default:
+      break;
   }
 
-  const tp = calcTP(tn, n);
-  const te = calcTE(tn, n);
-
-  resTE.textContent = `Tasa efectiva: ${te.toFixed(2)}%`;
-  resTP.textContent = `Tasa periódica: ${tp.toFixed(2)}%`;
 }
 
 document.getElementById("btnConvertirTN").addEventListener("click", convertirTN);

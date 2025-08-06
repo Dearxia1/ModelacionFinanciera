@@ -23,3 +23,9 @@ export function calcTPAA(te){
 export function calcTPNA(tpa,n){
   return (((tpa) * (n)));
 }
+
+export function calcTPAEAAtoV(tpa){
+  return ( (tpa / 100) / ((1 - (tpa/100))) * 100);
+}
+
+
