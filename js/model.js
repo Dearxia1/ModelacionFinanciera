@@ -24,8 +24,15 @@ export function calcTPNA(tpa,n){
   return (((tpa) * (n)));
 }
 
-export function calcTPAEAAtoV(tpa){
-  return ( (tpa / 100) / ((1 - (tpa/100))) * 100);
+export function calcTPAEAAtoV(tna, n) {
+
+  let tpa = (tna / 100) / n; // paso 1: nominal anticipada -> periódica anticipada (decimal)
+  console.log (tpa);
+  const tpv = tpa / (1 - tpa); // paso 2: anticipada -> vencida
+  console.log(tpv);
+  console.log(`${tna} y ${n}`);
+  return (Math.pow(1 + (tpv), n) - 1) * 100; // paso 3: vencida -> EA (%)
 }
+
 
 

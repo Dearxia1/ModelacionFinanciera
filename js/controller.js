@@ -21,6 +21,7 @@ function convertirTN() {
     }
 
      let te = calcTPAEAAtoV(tn, n);
+     let tp = calcTP(tn,n)
 
     resTE.textContent = `Tasa efectiva: ${te.toFixed(2)}%`;
     resTP.textContent = `Tasa periódica: ${tp.toFixed(2)}%`;
