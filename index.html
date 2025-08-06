@@ -13,6 +13,12 @@
     <label for="inpTN">Tasa nominal (%):</label>
     <input type="number" id="inpTN" step="0.01"><br><br>
 
+     <select id="type">
+      <option value="0"> Anticipada</option>
+      <option value="1"> Vencida</option>
+    </select>
+
+
     <label for="selN1">Número de periodos al año:</label>
     <select id="selN1">
       <option value="1">1 (Anual)</option>
@@ -25,12 +31,6 @@
       <option value="365">365 (Diario)</option>
       <option value="8640">8640 (Hora)</option>
     </select>
-
-      <select id="type">
-      <option value="0"> Anticipada</option>
-      <option value="1"> Vencida</option>
-    </select>
-
 
 
     <button id="btnConvertirTN">Convertir desde TN</button>
