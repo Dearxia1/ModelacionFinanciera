@@ -1,17 +1,28 @@
-/* General */
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: 'Segoe UI', 'Roboto', sans-serif;
-  margin: 0;
-  padding: 2rem 1rem;
   background: linear-gradient(to bottom, #eef3f9, #dce6f2);
   color: #333;
 }
 
-/* Contenedor */
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%; /* Garantiza que no crezca raro */
+  height: 100%;
+}
+
 .container {
   width: 100%;
   max-width: 420px;
-  margin: 0 auto;
   background: #ffffffcc;
   backdrop-filter: blur(8px);
   padding: 2rem 1.5rem;
@@ -20,6 +31,7 @@ body {
   transition: transform 0.2s;
 }
 
+
 .container:hover {
   transform: translateY(-2px);
 }
@@ -27,9 +39,7 @@ body {
 /* Títulos */
 h1, h2 {
   color: #2a6fb4;
-  font-size: 1.4rem;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
+  font-size: rem;
   text-align: center;
 }
 
@@ -44,9 +54,10 @@ label {
 
 /* Inputs y selects */
 input, select {
+  margin-top: 1.5rem;
   width: 100%;
   padding: 0.7rem;
-  border: 1px solid #d0d5dd;
+  border: 1px solid #0062ff6b;
   border-radius: 10px;
   box-sizing: border-box;
   font-size: 1rem;

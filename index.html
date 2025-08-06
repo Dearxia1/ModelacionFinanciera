@@ -7,9 +7,8 @@
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
+<div class="wrapper">
   <div class="container">
-    <h1>Conversor de Tasas</h1>
-
     <!-- Conversión desde TN -->
     <label for="inpTN">Tasa nominal (%):</label>
     <input type="number" id="inpTN" step="0.01"><br><br>
@@ -34,23 +33,21 @@
 
 
 
-
-
     <button id="btnConvertirTN">Convertir desde TN</button>
 
     <h2>Resultado:</h2>
     <p id="resTE">Tasa efectiva: </p>
     <p id="resTP">Tasa periódica: </p>
 
-    <hr>
-
+  </div>
+    <div class="container">
     <!-- Conversión desde TE -->
     <label for="inpTE">Tasa efectiva anual (%):</label>
     <input type="number" id="inpTE" step="0.01"><br><br>
 
     <label for="selN2">Número de periodos al año:</label>
     <select id="selN2">
-      <option value="1">1 (Anual)</option>W
+      <option value="1">1 (Anual)</option>
       <option value="2">2 (Semestral)</option>
       <option value="4">4 (Trimestral)</option>
       <option value="6">6 (Bimestral)</option>
@@ -70,6 +67,7 @@
     <p id="resTPNA">TP nominal anticipada: </p>
 
     <script type="module" src="./js/controller.js"></script>
+  </div>
   </div>
 </body>
 </html>

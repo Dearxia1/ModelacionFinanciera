@@ -24,8 +24,8 @@ function convertirTN() {
      let ten = calcTPAEAAtoV(tn, n);
 
 
-    resTE.textContent = `Tasa efectiva: ${ten.toFixed(2)}%`;
-    resTP.textContent = `Tasa periódica: ${tp.toFixed(2)}%`;
+    resTE.textContent = `Tasa efectiva: ${ten.toFixed(3)}%`;
+    resTP.textContent = `Tasa periódica: ${tp.toFixed(8)}%`;
 
       break;
 
@@ -42,8 +42,8 @@ function convertirTN() {
      let tp1 = calcTP(tn, n);
      let te1 = calcTE(tn, n);
 
-    resTE1.textContent = `Tasa efectiva: ${te1.toFixed(2)}%`;
-    resTP1.textContent = `Tasa periódica: ${tp1.toFixed(2)}%`;
+    resTE1.textContent = `Tasa efectiva: ${te1.toFixed(3)}%`;
+    resTP1.textContent = `Tasa periódica: ${tp1.toFixed(3)}%`;
 
         
     default:
@@ -73,10 +73,10 @@ function convertirTE() {
   const tpaa = calcTPAA(tpa);
   const tpna = calcTPNA(tpaa,n)
 
-  resTPA.textContent = `TP aplicada vencida: ${tpa.toFixed(2)}%`;
-  resTPNV.textContent = `TP nominal vencida: ${tpn.toFixed(2)}%`;
-  resTPAA.textContent = `TP aplicada anticipada: ${tpaa.toFixed(2)}%`;
-  resTPNA.textContent = `TP nominal anticipada: ${tpna.toFixed(2)}%`;
+  resTPA.textContent = `TP aplicada vencida: ${tpa.toFixed(7)}%`;
+  resTPNV.textContent = `TP nominal vencida: ${tpn.toFixed(7)}%`;
+  resTPAA.textContent = `TP aplicada anticipada: ${tpaa.toFixed(7)}%`;
+  resTPNA.textContent = `TP nominal anticipada: ${tpna.toFixed(7)}%`;
 }
 
 document.getElementById("btnConvertirTE").addEventListener("click", convertirTE);
